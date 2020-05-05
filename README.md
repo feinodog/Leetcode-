@@ -16,5 +16,14 @@ https://github.com/luliyucoordinate/Leetcode
 有可能就是排序后的端点差 有可能是某个点 采用前面一段+k 后-k 
 贪心  推导有点难。。。  划分法
 
+题目：664
+https://www.bilibili.com/video/BV12x411E7Rz?from=search&seid=8611268802613329580
+dp算法
+j是用距离来遍历 从1开始 0距离全是1
+
+题目：98 排序二叉树
+INT_MAX LONG_MAX
+
+
 1405 1007 98 664 1278
 
