@@ -16,5 +16,5 @@ https://github.com/luliyucoordinate/Leetcode
 有可能就是排序后的端点差 有可能是某个点 采用前面一段+k 后-k 
 贪心  推导有点难。。。  划分法
 
-
+1405 1007 98 664 1278
 
