@@ -176,4 +176,14 @@ j--;
 if (j != i) {
 arr[j] = tmp;
 }
-
+public int[] sort(int[] sourceArray) throws Exception {
+// 对 arr 进行拷贝，不改变参数内容
+int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+int len = arr.length;
+buildMaxHeap(arr, len);
+for (int i = len - 1; i > 0; i--) {
+swap(arr, 0, i);
+len--;
+heapify(arr, 0, len);
+}
+return arr;
