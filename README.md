@@ -104,3 +104,76 @@ int main () {
    const char s[2] = "-";
 
       char *contextStr = NULL;
+      
+      
+      
+      
+      public int[] sort(int[] sourceArray) throws Exception {
+int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+return quickSort(arr, 0, arr.length - 1);
+}
+private int[] quickSort(int[] arr, int left, int right) {
+if (left < right) {
+int partitionIndex = partition(arr, left, right);
+quickSort(arr, left, partitionIndex - 1);
+quickSort(arr, partitionIndex + 1, right);
+}
+return arr;
+}
+private int partition(int[] arr, int left, int right) {
+int pivot = left;
+int index = pivot + 1;
+for (int i = index; i <= right; i++) {
+if (arr[i] < arr[pivot]) {
+swap(arr, i, index);
+index++;
+
+}
+swap(arr, pivot, index - 1);
+return index - 1;
+}
+private void swap(int[] arr, int i, int j) {
+int temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+
+
+private void quickSort(int[] arr, int left, int right){
+if (left < right) {
+
+int lt = left;
+int index = left + 1;
+int gt = left;
+int pivotValue = arr[left];
+while (index <= gt) {
+if (arr[index] < pivotValue) swap(arr, lt++, index++);
+else if (arr[index] > pivotValue) swap(arr, index, gt--);
+else index++;
+}
+quickSort(arr, left, lt - 1);
+quickSort(arr, gt + 1, left);
+}
+}
+private void swap(int[] arr, int i, int j) {
+int temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+
+
+private void insertSort(int[] arr) {
+// 从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
+for (int i = 1; i < arr.length; i++) {
+// 记录要插入的数据
+int tmp = arr[i];
+
+int j = i;
+while (j > 0 && tmp < arr[j - 1]) {
+arr[j] = arr[j - 1];
+j--;
+}
+// 存在比其小的数，插入
+if (j != i) {
+arr[j] = tmp;
+}
+
