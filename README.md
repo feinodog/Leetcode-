@@ -27,3 +27,80 @@ INT_MAX LONG_MAX
 
 1405 1007 98 664 1278
 
+字符串练习：
+int memcmp(const void *str1, const void *str2, size_t n)
+void *memcpy(void *dest, const void *src, size_t n)
+
+errno_t memcpy_s(
+
+   void* dest,
+
+   size_t destMax,
+
+   const void* src,
+
+   size_t count 
+
+)
+ 
+
+
+void *memset(void *str, int c, size_t n)
+
+errno_t memset_s(
+
+void* dest, 
+
+size_t destMax, 
+
+int c, 
+
+size_t count
+
+)
+
+
+_s errno_t
+EOK = 0
+char *strcat(char *dest, const char *src)
+errno_t strcat_s(
+
+   char* strDest,
+
+   size_t destMax,
+
+   const char* strSrc
+
+)
+ errno_t strncat_s(
+
+char* strDest, 
+
+size_t destMax, 
+
+const char* strSrc, 
+
+size_t count
+
+)
+ 
+errno_t strncat_s(
+
+char* strDest, 
+
+size_t destMax, 
+
+const char* strSrc, 
+
+size_t count
+
+)
+char *strcpy(char *dest, const char *src)
+
+char *strtok_s(char *strToken, const char *strDelimit, char **context); 
+strtok_s函数将剩余的字符串存储在contextStr变量中，而不是函数内部的静态变量中，从而保证了多线程访问的安全性。
+int main () {
+   char str[80] = "This is - a - website";
+   const char s[2] = "-";
+
+      char *contextStr = NULL;
