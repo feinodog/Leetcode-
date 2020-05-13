@@ -197,25 +197,28 @@ return arr;
 重点：
 1.手撕qsort 记忆2种方法
 a.常规
-
+Done
 b.荷兰旗优化方案
-
-
+三色旗后 lt为边界+1 gt为右边界-1
+Done
 2.手撕插入排序
-
+Done
 题目：147
 
 3.归并排序
 数组参考：
-https://blog.csdn.net/Silence_R/article/details/86524975
-
+https://www.cnblogs.com/yangmenda/p/11726968.html
+需要一个临时数组变量做参数指针
 链表参考
 https://blog.csdn.net/Doutd_y/article/details/81544606
 
 
 题目：88 148 23
 
-
+4.栈
+a.数组栈、链表栈
+题目:155
+https://blog.csdn.net/qq_39769369/article/details/83614758
 
 
 
