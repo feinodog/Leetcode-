@@ -187,3 +187,38 @@ len--;
 heapify(arr, 0, len);
 }
 return arr;
+
+
+###5月底冲刺计划
+
+大纲：
+参考index.pdf在welink上 潘东的聊天记录
+参考小象学院的ppt
+重点：
+1.手撕qsort 记忆2种方法
+a.常规
+
+b.荷兰旗优化方案
+
+
+2.手撕插入排序
+
+题目：147
+
+3.归并排序
+数组参考：
+https://blog.csdn.net/Silence_R/article/details/86524975
+
+链表参考
+https://blog.csdn.net/Doutd_y/article/details/81544606
+
+
+题目：88 148 23
+
+
+
+
+
+
+
+
