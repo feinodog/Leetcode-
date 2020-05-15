@@ -1,0 +1,413 @@
+     1.64%     0.01%  sre_bin  perf-4125.map     [.] DLSCH_InitCcSchInfo                                     
+            |          
+            |--1.63%-- DLSCH_InitCcSchInfo
+            |          |          
+            |          |--0.53%-- DLSCH_InitAlgoPara
+            |          |          |          
+            |          |          |--0.13%-- DLSCH_InitPublicAlgoPara
+            |          |          |          |          
+            |          |          |           --0.12%-- DLSCH_InitMaxPairLayerNum
+            |          |          |                     |          
+            |          |          |                     |--0.09%-- DLSCH_AlgoGetMaxPairLayerNum
+            |          |          |                     |          |          
+            |          |          |                     |          |--0.03%-- MCM_GetL2ResAllocateAddrByTrp
+            |          |          |                     |          |          
+            |          |          |                     |          |--0.02%-- DLSCH_UptMaxPairLayerByTrxNum
+            |          |          |                     |          |          |          
+            |          |          |                     |          |           --0.02%-- MCM_GetTrpRxAntNum
+            |          |          |                     |          |                     |          
+            |          |          |                     |          |                      --0.01%-- MCM_GetCellTagBuffer
+            |          |          |                     |          |          
+            |          |          |                     |          |--0.02%-- DATALIB_MultiTimeProtectRead
+            |          |          |                     |          |          
+            |          |          |                     |           --0.02%-- MCM_GetICRCL2RatResQuota
+            |          |          |                     |                     |          
+            |          |          |                     |                      --0.01%-- MCM_L2ResmngTrace
+            |          |          |                     |          
+            |          |          |                      --0.01%-- MCM_GetICRCL2RatResQuota
+            |          |          |          
+            |          |          |--0.10%-- DLSCH_InitNbSsbRmsiPara
+            |          |          |          |          
+            |          |          |          |--0.06%-- DLSCH_GetInitBwp0RbBM
+            |          |          |          |          |          
+            |          |          |          |          |--0.04%-- DLSCH_GetCoresetZero
+            |          |          |          |          |          
+            |          |          |          |          |--0.01%-- MCM_GetCellTagBuffer
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- DLSCH_GetBwpBandWides
+            |          |          |          |          
+            |          |          |          |--0.01%-- DLSCH_IsAvoidNbSsbRmsiSlot
+            |          |          |          |          
+            |          |          |           --0.01%-- DLSCH_RBMNG_GetRbBMByRbRange
+            |          |          |          
+            |          |          |--0.04%-- DLSCH_InitPowerSavingPara
+            |          |          |          |          
+            |          |          |           --0.03%-- MCM_GetTrpRxAntNum
+            |          |          |                     |          
+            |          |          |                      --0.02%-- MCM_GetCommTrpPara
+            |          |          |          
+            |          |          |--0.03%-- DLSCH_InitTrpAlgoPara
+            |          |          |          |          
+            |          |          |           --0.02%-- DLSCH_CalcInitReNumPerRB
+            |          |          |                     |          
+            |          |          |                     |--0.01%-- DLSCH_CalcInitReNumPerRBPdschRange
+            |          |          |                     |          DLSCH_GetDmrsUsedSymNumBySymNum
+            |          |          |                     |          
+            |          |          |                      --0.01%-- DLSCH_GetPdschRange
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_GetMultiDlOllaIndex
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_InitNsaHarmIntrfAlgoPara
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_InitLnrInterfPara
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetSignalMcsRsvPara
+            |          |          |          
+            |          |          |--0.01%-- MCM_GetCellTagBuffer
+            |          |          |          
+            |          |          |--0.01%-- SUSRPDSCH_DeleteHarmInterferBitmap
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetLCellGrant
+            |          |          |          
+            |          |          |--0.01%-- MCM_GetTrpIndexList
+            |          |          |          
+            |          |           --0.01%-- DLSCH_DlNbSsbRmsiCfgInfoTrace
+            |          |          
+            |          |--0.22%-- MCM_MTM_GetDlschTiming
+            |          |          |          
+            |          |          |--0.18%-- MCM_MTM_SetDlschTiming
+            |          |          |          |          
+            |          |          |          |--0.05%-- MCM_MTM_FillDlschTimingForSul
+            |          |          |          |          
+            |          |          |          |--0.04%-- MCM_MTM_UpdateDlschStartAndEndSym
+            |          |          |          |          
+            |          |          |          |--0.02%-- MCM_MTM_GetSlotRuntimeCfg
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- MCM_MTM_GetSlotRuntimeInfo
+            |          |          |          |          
+            |          |          |          |--0.01%-- MCM_MTM_FillDlschTimingInfo4Ca
+            |          |          |          |          
+            |          |          |           --0.01%-- MCM_GetCellTagBuffer
+            |          |          |          
+            |          |          |--0.02%-- MCM_MTM_FillDlschTimingInfo
+            |          |          |          
+            |          |          |--0.01%-- MCM_MTM_RemoteScenarioTrace
+            |          |          |          
+            |          |          |--0.01%-- MCM_MTM_GetOffsetSlotNo
+            |          |          |          
+            |          |          |--0.01%-- MCM_MTM_FillDlschTimingInfo4Ca
+            |          |          |          
+            |          |           --0.01%-- MCM_MTM_TimingTraceRpt
+            |          |          
+            |          |--0.21%-- DLSCH_TtiPreStartJobLf
+            |          |          |          
+            |          |          |--0.11%-- DLSCH_RBMNG_TtiInit
+            |          |          |          |          
+            |          |          |          |--0.04%-- DLSCH_PdschAvailPowerParaInit
+            |          |          |          |          |          
+            |          |          |          |           --0.04%-- DLSCH_CalcCcLeftPower
+            |          |          |          |                     |          
+            |          |          |          |                     |--0.03%-- DLSCH_CalcCcDecPower
+            |          |          |          |                     |          |          
+            |          |          |          |                     |           --0.02%-- MCM_GetDlpcTrpPara
+            |          |          |          |                     |          
+            |          |          |          |                      --0.01%-- MCM_GetTrpDlpcParaPtr
+            |          |          |          |          
+            |          |          |          |--0.01%-- DLSCH_RBMNG_MaskNonSlotRb
+            |          |          |          |          
+            |          |          |           --0.01%-- DLSCH_CalcCcLeftPower
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_InitRateMatchingInfo
+            |          |          |          |          
+            |          |          |           --0.02%-- DLSCH_IsZpSetParsieSlot
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_FillRateMatchingPatternInfo
+            |          |          |          DLSCH_GetPatternWorkInfo
+            |          |          |          
+            |          |          |--0.01%-- MCM_GetCellTagBuffer
+            |          |          |          
+            |          |          |--0.01%-- memset
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetTtiCtrl
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetSymSchSwitch
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetPatternWorkInfo
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_GetCandiUserSet
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_CandiUserSetInit
+            |          |          |          
+            |          |           --0.01%-- DLSCH_IsZpSetParsieSlot
+            |          |          
+            |          |--0.15%-- memset
+            |          |          
+            |          |--0.13%-- DLSCH_RBMNG_CellRbInitLimit
+            |          |          |          
+            |          |          |--0.08%-- DLSCH_RBMNG_TrpRbInitLimit
+            |          |          |          |          
+            |          |          |          |--0.03%-- DLSCH_RBMNG_FddLnrResPreEstimateRst
+            |          |          |          |          MCM_GetDlRbInfo
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- MCM_LnrRbAllocInfoTrace
+            |          |          |          |          
+            |          |          |          |--0.01%-- DLSCH_RBMNG_UpdateValidRbBitmap
+            |          |          |          |          
+            |          |          |          |--0.01%-- DLSCH_RBMNG_RbStubProc
+            |          |          |          |          
+            |          |          |           --0.01%-- L2STUB_GetStubValue
+            |          |          |          
+            |          |           --0.01%-- DLSCH_RBMNG_UpdateValidRbBitmap
+            |          |          
+            |          |--0.05%-- CCHP_IsMibSsbSending
+            |          |          |          
+            |          |          |--0.04%-- CCHP_CheckMibBasicConditions
+            |          |          |          |          
+            |          |          |          |--0.02%-- CCHP_IsSceneNoNeedSendSysInfo
+            |          |          |          |          |          
+            |          |          |          |          |--0.01%-- MCM_MTM_GetSlotType4DlDirection
+            |          |          |          |          |          MCM_MTM_GetSlotSpecUsage
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--0.01%-- MCM_IsRicFrm
+            |          |          |          |          |          |          
+            |          |          |          |          |           --0.01%-- MCM_GetCellClockAsynchronismInfo
+            |          |          |          |          |          
+            |          |          |          |           --0.00%-- MCM_Get141CellDownlinkWorkingStatus
+            |          |          |          |          
+            |          |          |          |--0.01%-- CCHP_CheckMibPayloadLength
+            |          |          |          |          
+            |          |          |          |--0.01%-- MCM_Get141CellDownlinkWorkingStatus
+            |          |          |          |          
+            |          |          |           --0.00%-- CCHP_GetSsbPeriod
+            |          |          |          
+            |          |           --0.01%-- CCHP_IsFrameToSendSsb
+            |          |          
+            |          |--0.05%-- DLSCH_StartTimeCellChr
+            |          |          
+            |          |--0.04%-- MCM_MTM_GetSlotType4DlDirection
+            |          |          MCM_MTM_GetSlotSpecUsage
+            |          |          |          
+            |          |          |--0.03%-- MCM_FrmIsChanCali
+            |          |          |          |          
+            |          |          |           --0.01%-- MCM_GetChanCaliInfo
+            |          |          |          
+            |          |          |--0.01%-- MCM_SlotIsSilentDetect
+            |          |          |          
+            |          |          |--0.01%-- MCM_FrmIsTrpChanCali
+            |          |          |          
+            |          |           --0.00%-- MCM_IsRicFrmPerTrp
+            |          |          
+            |          |--0.03%-- MCM_MTM_GetSlotType
+            |          |          MCM_MTM_GetOneSlotOriCfg
+            |          |          |          
+            |          |          |--0.01%-- MCM_MTM_CheckIfLongGap
+            |          |          |          
+            |          |           --0.01%-- MCM_GetCellTagBuffer
+            |          |          
+            |          |--0.03%-- DLSCH_InitMmlAlgoPara
+            |          |          
+            |          |--0.02%-- DLSCH_InitDfxTraceInfo
+            |          |          
+            |          |--0.02%-- DLSCH_CSTR_GetMaxSchUePerTti
+            |          |          
+            |          |--0.02%-- DLSCH_SetInitTimeCellChr
+            |          |          
+            |          |--0.02%-- DLSCH_GetMultiPucchSlot
+            |          |          
+            |          |--0.01%-- DLSCH_InitNbSsbRmsiPara
+            |          |          
+            |          |--0.01%-- DLSCH_Fill517TraceHeadSymInfo
+            |          |          
+            |          |--0.01%-- DLSCH_SetPowerSavingInfo
+            |          |          
+            |          |--0.01%-- MCM_MTM_GetOffsetSlotNo
+            |          |          
+            |          |--0.01%-- MCM_GetCellTagBuffer
+            |          |          
+            |          |--0.01%-- DLSCH_RBMNG_TtiInit
+            |          |          
+            |          |--0.01%-- DLSCH_GetStrategySet
+            |          |          
+            |          |--0.01%-- DLSCH_DlNbSsbRmsiCfgInfoTrace
+            |          |          
+            |          |--0.01%-- 0xc43a08
+            |          |          
+            |          |--0.01%-- RSSCH_CSIRS_GetCsirsReBitmap
+            |          |          RSSCH_CSIRS_FillReBitmapInCsirsSymb
+            |          |          
+            |          |--0.01%-- DLSCH_UserMapInit
+            |          |          
+            |          |--0.01%-- DLSCH_CapTimePointInner
+            |          |          
+            |          |--0.01%-- DLSCH_FillRateMatchingPatternInfo
+            |          |          
+            |          |--0.01%-- DLSCH_GetSymSchSwitch
+            |          |          
+            |          |--0.01%-- DLSCH_GetMultiDlOllaIndex
+            |          |          
+            |          |--0.01%-- CCHP_CheckMibBasicConditions
+            |          |          
+            |          |--0.00%-- DLSCH_InitPdcchItfTraceInfoForDrx
+            |          |          
+            |          |--0.00%-- MCM_GetCellRatType
+            |          |          
+            |           --0.00%-- MCM_MTM_GetTrsFlag
+            |          
+             --0.01%-- Job_Recv
+                       L2INF_HAL_RecvJobProcess
+                       L2INF_HAL_L2JobProcess
+                       L2INF_HAL_ProcJobFromSlaveCore
+                       DLSCH_CcSchedulerJobProc
+                       DLSCH_CcScheduler
+                       DLSCH_InitCcSchInfo
+
+     1.64%     0.07%  sre_bin  perf-4125.map     [.] DLSCH_PackFpgaPdschHdr                                  
+            |          
+            |--1.57%-- DLSCH_PackFpgaPdschHdr
+            |          |          
+            |          |--0.94%-- DLSCH_FillPdschBasicInfo
+            |          |          |          
+            |          |          |--0.36%-- DLSCH_UsrFillBasicInfoLf
+            |          |          |          |          
+            |          |          |          |--0.19%-- USERSCHPDSCH_FillBeamInfo
+            |          |          |          |          |          
+            |          |          |          |          |--0.02%-- DLSCH_L2ToL1WeightModeLfFdd
+            |          |          |          |          |          
+            |          |          |          |          |--0.02%-- memset_s
+            |          |          |          |          |          
+            |          |          |          |          |--0.01%-- USERSCHPDSCH_InitBeamID
+            |          |          |          |          |          
+            |          |          |          |          |--0.01%-- USERSCHPDSCH_FillFddOnlyBeamInfo
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- memset
+            |          |          |          |          
+            |          |          |          |--0.06%-- MCM_IsTdd1T1RCell
+            |          |          |          |          |          
+            |          |          |          |          |--0.05%-- MCM_IsTdd1T1RTrp
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--0.02%-- MCM_GetCellTagBuffer
+            |          |          |          |          |          |          
+            |          |          |          |          |           --0.01%-- MCM_GetCommTrpPara
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- MCM_GetCellIndexByTrpIndex
+            |          |          |          |          
+            |          |          |          |--0.04%-- USERSCHPDSCH_FillFddOnlyBeamInfo
+            |          |          |          |          
+            |          |          |          |--0.03%-- USERSCHPDSCH_InitBeamID
+            |          |          |          |          
+            |          |          |          |--0.02%-- MCM_GetCellRatType
+            |          |          |          |          
+            |          |          |           --0.01%-- DLSCH_IsLampsite4T4ChannelOff
+            |          |          |          
+            |          |          |--0.17%-- DLSCH_SetPdschPwrFact
+            |          |          |          |          
+            |          |          |          |--0.04%-- DLSCH_CalEMFPwrDb
+            |          |          |          |          |          
+            |          |          |          |          |--0.01%-- MCM_GetCellTagBuffer
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- MCM_GetDlpcTrpPara
+            |          |          |          |          
+            |          |          |          |--0.04%-- DLSCH_CalRFPwrConvergeDb
+            |          |          |          |          |          
+            |          |          |          |          |--0.02%-- MCM_GetDlpcTrpPara
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- MCM_GetCellTagBuffer
+            |          |          |          |          
+            |          |          |          |--0.03%-- DLSCH_CalUsNbPwrBackOffDb
+            |          |          |          |          |          
+            |          |          |          |          |--0.02%-- DLSCH_CheckUsNbRestrictCondition
+            |          |          |          |          |          
+            |          |          |          |           --0.00%-- MCM_GetCellTagBuffer
+            |          |          |          |          
+            |          |          |          |--0.02%-- DLSCH_NearPointPwrBackOffDb
+            |          |          |          |          
+            |          |          |          |--0.02%-- DLSCH_Fill517TraceUserNearPointPowerBackInfo
+            |          |          |          |          
+            |          |          |          |--0.01%-- MCM_GetTrpDlpcParaPtr
+            |          |          |          |          
+            |          |          |           --0.01%-- DLSCH_RBMNG_GetRbNum
+            |          |          |          
+            |          |          |--0.08%-- DLSCH_GetL2L1CapFlg
+            |          |          |          |          
+            |          |          |          |--0.06%-- DLSCH_GetL2L1UserLevelCapFlg
+            |          |          |          |          
+            |          |          |           --0.01%-- L2STUB_GetSwitchState
+            |          |          |          
+            |          |          |--0.05%-- DLSCH_FillBasicInfo
+            |          |          |          
+            |          |          |--0.04%-- DLSCH_FillPdschDmrsBasicInfo
+            |          |          |          
+            |          |          |--0.04%-- USERSCHPDSCH_FillBeamInfo
+            |          |          |          
+            |          |          |--0.03%-- DLSCH_FillCellCommInfoInPdschBasic
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_MathFixPoint
+            |          |          |          
+            |          |          |--0.02%-- DLSCH_FillPdschDmrsScrambleId
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_CalRFPwrConvergeDb
+            |          |          |          
+            |          |          |--0.01%-- L2STUB_GetSwitchState
+            |          |          |          
+            |          |          |--0.01%-- DLSCH_CalUsNbPwrBackOffDb
+            |          |          |          
+            |          |          |--0.01%-- MCM_GetL1TrpIdByTrpIndex
+            |          |          |          
+            |          |           --0.01%-- DLSCH_Fill517TraceUserNearPointPowerBackInfo
+            |          |          
+            |          |--0.32%-- DLSCH_FillPdschMsgDataType
+            |          |          
+            |          |--0.22%-- DLSCH_FillBWPInfo
+            |          |          |          
+            |          |          |--0.17%-- DLSCH_GetDlBwpMaxBw
+            |          |          |          |          
+            |          |          |          |--0.15%-- SUSR_GetUserBwpMaxBw
+            |          |          |          |          |          
+            |          |          |          |          |--0.11%-- DATALIB_IntegProtectReadCopy
+            |          |          |          |          |          
+            |          |          |          |           --0.01%-- memcpy_s
+            |          |          |          |          
+            |          |          |           --0.01%-- SUSR_GetUsrBwpGenericParaTag
+            |          |          |          
+            |          |           --0.01%-- SUSR_GetUserBwpMaxBw
+            |          |          
+            |          |--0.05%-- DLSCH_GetDlBwpMaxQm
+            |          |          
+            |          |--0.01%-- DATALIB_IntegProtectRead
+            |          |          
+            |          |--0.01%-- DLSCH_GetL2L1CapFlg
+            |          |          
+            |          |--0.01%-- DLSCH_UsrFillBasicInfoLf
+            |          |          
+            |          |--0.01%-- DLSCH_SetPdschPwrFact
+            |          |          
+            |          |--0.00%-- DLSCH_FillBasicInfo
+            |          |          
+            |           --0.00%-- DLSCH_FillCellCommInfoInPdschBasic
+            |          
+             --0.07%-- Job_Recv
+                       L2INF_HAL_RecvJobProcess
+                       L2INF_HAL_L2JobProcess
+                       L2INF_HAL_ProcJobFromSlaveCore
+                       DLSCH_CcSchedulerJobProc
+                       DLSCH_CcScheduler
+                       0xc3f7b4
+                       DLSCH_UsrGrpPostProc
+                       DLSCH_TrpSchedulerLf
+                       DLSCH_DataSchLf
+                       DLSCH_PairAndLowSuSch
+                       DLSCH_PairSch
+                       DLSCH_SpatialSchPostProc
+                       DLSCH_TrgWbPostSchTsk
+                       DLSCH_PostProc
+                       DLSCH_TriggerUserPostPrcs
+                       DLSCH_UserPostProc
+                       DLSCH_UserPostProcSerial
+                       DLSCH_UserPostProcEntryForSplit
+                       DLSCH_UserPostAllocTB2LCHs
+                       DLSCH_AllocTB2LCHs
+                       |          
+                       |--0.06%-- DLSCH_NotifyDmac2Pack
+                       |          DLSCH_PackFpgaPdschHdr
+                       |          
+                        --0.02%-- DLSCH_PackFpgaPdschHdr
