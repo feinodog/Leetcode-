@@ -1,3 +1,15 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 19K of event 'r11'
+# Event count (approx.): 20898998011
+#
+# Children      Self  Command  Shared Object     Symbol                                                      
+# ........  ........  .......  ................  ............................................................
+#     
+     
      0.00%     0.00%  sre_bin  perf-4125.map     [.] MCM_MTM_SetCsiRsInfoHf                                  
             |
             ---Job_Recv
