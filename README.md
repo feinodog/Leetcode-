@@ -198,15 +198,12 @@ return arr;
 1.手撕qsort 记忆2种方法
 a.常规
 Done
-题目414 变种!  找到位置就结束  判断位置 再递归
-
 b.荷兰旗优化方案
 三色旗后 lt为边界+1 gt为右边界-1
 Done
 2.手撕插入排序
 Done
 题目：147
-
 
 3.归并排序
 数组参考：
@@ -223,8 +220,91 @@ a.数组栈、链表栈
 题目:155
 https://blog.csdn.net/qq_39769369/article/details/83614758
 
+题目:20
+
+
+队列 621
+堆 215
+763双指针
+3划窗
+130
 
 
 
 
-
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 19K of event 'r11'
+# Event count (approx.): 20898998011
+#
+# Children      Self  Command  Shared Object     Symbol                                                      
+# ........  ........  .......  ................  ............................................................
+#
+    99.02%     0.23%  sre_bin  perf-4125.map     [.] Job_Recv                                                
+            |
+            ---Job_Recv
+               |          
+               |--98.75%-- L2INF_HAL_RecvJobProcess
+               |          |          
+               |          |--98.23%-- L2INF_HAL_L2JobProcess
+               |          |          |          
+               |          |          |--98.08%-- L2INF_HAL_ProcJobFromSlaveCore
+               |          |          |          |          
+               |          |          |          |--45.93%-- DLSCH_CcSchedulerJobProc
+               |          |          |          |          |          
+               |          |          |          |          |--45.90%-- DLSCH_CcScheduler
+               |          |          |          |          |          |          
+               |          |          |          |          |          |--42.95%-- 0xc3f7b4
+               |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |--34.21%-- DLSCH_UsrGrpPostProc
+               |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |--33.97%-- DLSCH_TrpSchedulerLf
+               |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |--33.60%-- DLSCH_DataSchLf
+               |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |--16.85%-- DLSCH_SuUserSch
+               |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |--8.38%-- DLSCH_SuUserSchFromDrbBearGroupPdcch
+               |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |--8.23%-- DLSCH_SuUserAllocPdcch
+               |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |--7.25%-- DLSCH_SuUserApply4Pdcch
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |--7.20%-- DLSCH_PdcchResAlloc
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--6.65%-- PDCCHSCH_AllocResForTrp
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--4.96%-- PDCCHSCH_ResAllocProc
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--2.60%-- PDCCHSCH_UserResAlloc
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--1.19%-- PDCCHSCH_PrepareResAllocInfo
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.26%-- 0xd1c13c
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.10%-- SUSRPDCCH_GetYk
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |           --0.01%-- SUSRPDCCH_GetUsrInfo
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.22%-- PDCCHSCH_UpdateUserSearchInfo
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.14%-- PDCCHSCH_CalcUserPower
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.01%-- 0xd170cc
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |           --0.01%-- L2INF_MathDb2Liner
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.04%-- PDCCHSCH_UpdateUeSpecificCoresetSearchInfo
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.02%-- PDCCHSCH_UpdateUserSearchCce
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |           --0.01%-- 0xd170a0
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.18%-- 0xd1d140
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.15%-- 0xd1d064
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+               |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--0.10%-- SUSRPDCCH_GetUsrDlCtrlInfo
