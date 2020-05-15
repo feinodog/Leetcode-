@@ -1,0 +1,50 @@
+     0.00%     0.00%  sre_bin  perf-4125.map     [.] MCM_MTM_SetCsiRsInfoHf                                  
+            |
+            ---Job_Recv
+               L2INF_HAL_RecvJobProcess
+               L2INF_HAL_L2JobProcess
+               L2INF_HAL_ProcJobFromSlaveCore
+               CSIRS_RunTtiPerCell
+               RSSCH_CSIRS_RunTtiPerCell
+               RSSCH_CSIRS_SchTtiProc
+               RSSCH_CSIRS_GetCsirsSchTiming
+               MCM_MTM_GetCsiRsTiming
+               MCM_MTM_SetCsiRsInfoHf
+
+     0.00%     0.00%  sre_bin  perf-4125.map     [.] 0x0000000000d34a0c                                      
+            |
+            ---Job_Recv
+               L2INF_HAL_RecvJobProcess
+               L2INF_HAL_L2JobProcess
+               L2INF_HAL_ProcJobFromSlaveCore
+               PUCCHSCH_RecvJobMsgProc
+               PUCCHSCH_PackageMtmPucchMngFrm
+               PUCCHSCH_FillMngFrmGeneralProcOpti
+               0xd355e4
+               0xd35404
+               0xd352e8
+               0xd34a0c
+
+     0.00%     0.00%  sre_bin  perf-4125.map     [.] 0x0000000000d3f8fc                                      
+            |
+            ---Job_Recv
+               L2INF_HAL_RecvJobProcess
+               L2INF_HAL_L2JobProcess
+               L2INF_HAL_ProcJobFromSlaveCore
+               DLSCH_CcSchedulerJobProc
+               DLSCH_CcScheduler
+               0xc3f7b4
+               DLSCH_UsrGrpPostProc
+               DLSCH_TrpSchedulerLf
+               DLSCH_DataSchLf
+               DLSCH_SuUserSch
+               DLSCH_SuUserSchFromDrbBearGroupPucch
+               DLSCH_SuSchApplyPucchRes
+               PUCCHSCH_AllocHarqAckRes
+               0xd3f8fc
+
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#
