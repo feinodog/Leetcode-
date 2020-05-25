@@ -339,4 +339,120 @@ https://www.jianshu.com/p/14944a7d273e
 输入[1,1,1,1,1,1]   返回[]。
 
 105
+ （1）由于噪声是以一个点为起始点逐渐向外扩展递减的，首先想到的就是递归的思路，处理完一个点，然后递归处理其周围的8个点
+
+（2）递归的退出条件：到达边界 || 矩阵中原有的值 >= 新来的值
+
+（3）遍历方向比较简单的方法：将8个方向写成-1,0,1的变量数组，循环遍历
+
+注意：对功能函数进行相应的抽取，不要都堆在主逻辑中
+
+代码如下：
+ublic class Case1 {
+02
+    // 方向数组
+03
+    private int[][] list = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+04
  
+05
+    private int rowNo;
+06
+ 
+07
+    private int columnNo;
+08
+ 
+09
+    public int spreadNoise(int n, int m, int[][] noise) {
+10
+        rowNo = n;
+11
+        columnNo = m;
+12
+        int[][] matrix = new int[n][m];
+13
+        for (int[] tempData : noise) {
+14
+            fillMatrix(matrix, tempData);
+15
+        }
+16
+        return calculateResult(matrix);
+17
+    }
+18
+ 
+19
+    // 填充矩阵，递归调用
+20
+    private void fillMatrix(int[][] matrix, int[] tempData) {
+21
+        int x = tempData[0];
+22
+        int y = tempData[1];
+23
+        int value = tempData[2];
+24
+        // 退出条件：越界 || 原来的值 >= 新的值
+25
+        if (isOutOfBoard(x, y) || matrix[x][y] >= value) {
+26
+            return;
+27
+        }
+28
+ 
+29
+        matrix[x][y] = value;
+30
+        // 八个方向依次递归调用填充方法
+31
+        for (int[] tempList : list) {
+32
+            int newX = x + tempList[0];
+33
+            int newY = y + tempList[1];
+34
+            int[] newData = {newX, newY, value - 1};
+35
+            fillMatrix(matrix, newData);
+36
+        }
+37
+    }
+38
+ 
+39
+    // 越界判断
+40
+    private boolean isOutOfBoard(int x, int y) {
+41
+        return x < 0 || x >= rowNo || y < 0 || y >= columnNo;
+42
+    }
+43
+ 
+44
+    // 计算最终结果
+45
+    private int calculateResult(int[][] array) {
+46
+        int result = 0;
+47
+        for (int[] ints : array) {
+48
+            for (int j = 0; j < array[0].length; j++) {
+49
+                result = result + ints[j];
+50
+            }
+51
+        }
+52
+        return result;
+53
+    }
+54
+}
+
