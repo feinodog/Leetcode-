@@ -457,3 +457,4 @@ ublic class Case1 {
 }
 有visit dfs 记忆化搜索
 518  494  1201  1011  939  963  105  357 10
+https://www.cnblogs.com/gongpixin/p/6761389.html  二分搜和变形
