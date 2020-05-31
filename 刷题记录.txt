@@ -1,0 +1,14 @@
+2020年5月31日22:14:56
+149
+为了让hash值还是int 所以要求最大公约数
+   int x=points[j][0]-points[i][0];
+            int y=points[j][1]-points[i][1]
+int key=(abs(x/z)*10+abs(y/z))%127;    //哈希表的键值
+前面dx 还乘以10 区分dx dy 相同的情况
+求最大公约数和最小公倍数
+http://c.biancheng.net/view/562.html
+思路参考
+https://leetcode-cn.com/problems/max-points-on-a-line/solution/zhi-xian-shang-zui-duo-de-dian-shu-by-leetcode/
+第一个解题报告
+101
+
