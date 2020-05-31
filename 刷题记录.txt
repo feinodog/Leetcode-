@@ -11,4 +11,6 @@ http://c.biancheng.net/view/562.html
 https://leetcode-cn.com/problems/max-points-on-a-line/solution/zhi-xian-shang-zui-duo-de-dian-shu-by-leetcode/
 第一个解题报告
 101
-
+树的周游算法  bfs dfs
+看第一个解题报告
+就是dfs  注意镜像  left right    right left  
